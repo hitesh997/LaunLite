@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:id="@+id/popup"
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<Button
+    android:visibility="gone"
+    android:id="@+id/settings"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:drawableLeft="@drawable/home_settings"
+    android:text="Home Settings"/>
+<Button
+    android:visibility="gone"
+   android:id="@+id/widgets"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:drawableLeft="@drawable/widgtes"
+    android:text="Widgets"/>
+<Button
+    android:id="@+id/wallpaper"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:drawableLeft="@drawable/wallpaper"
+    android:text="Wallpaper"/>
+</LinearLayout>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:id="@+id/MainScreen"
+    tools:context="com.production.hitesh.launlite.MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="120dp">
+        <View
+            android:layout_alignTop="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:background="@color/White"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="80dp"
+            ></View>
+
+
+        <TextClock
+            android:gravity="center"
+            android:layout_marginTop="80dp"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:fontFamily="@font/aileronthin"
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/White"
+            tools:text="TIME"/>
+        <View
+            android:id="@+id/lower"
+            android:layout_alignBottom="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:background="@color/White"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="80dp"
+            ></View>
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:fontFamily="@font/aileronthin"
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            android:text="Date"
+            android:textSize="17dp"
+            android:layout_below="@+id/lower"/>
+
+
+        <RelativeLayout
+            android:visibility="gone"
+
+            android:id="@+id/remove"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            >
+            <Button
+                android:id="@+id/redmoveButton"
+               android:layout_alignParentBottom="true"
+                android:layout_marginLeft="40dp"
+                android:drawableLeft="@drawable/ic_clear"
+                android:drawablePadding="7dp"
+                android:text="Remove"
+                android:textColor="#f44336"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+             <Button
+                 android:id="@+id/info"
+                 android:layout_alignParentEnd="true"
+                 android:layout_marginRight="40dp"
+               android:layout_alignParentBottom="true"
+                android:drawableLeft="@drawable/ic_info"
+                android:drawablePadding="7dp"
+                android:text="App Info"
+                android:textColor="#f44336"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+
+
+        </RelativeLayout>
+         <GridView
+             android:id="@+id/homeGrid"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="180dp"
+             android:numColumns="auto_fit"
+             android:columnWidth="70dp"
+
+             android:horizontalSpacing="5dp"
+             android:verticalSpacing="20dp"
+             android:gravity="center"
+
+             android:paddingLeft="10dp"
+             android:paddingRight="7dp"
+             android:paddingBottom="20dp"
+             android:paddingTop="20dp"
+             android:clipToPadding="false">
+
+         </GridView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/hotSeat"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="30dp"
+        android:layout_height="70dp"
+        android:duplicateParentState="true">
+        <ImageButton
+            android:background="@null"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:id="@+id/mid"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <ImageButton
+            android:id="@+id/left"
+            android:background="@null"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_toStartOf="@+id/mid"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <ImageButton
+            android:id="@+id/right"
+            android:background="@null"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_toRightOf="@+id/mid"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:id="@+id/AppDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="25dp"
+        android:orientation="vertical"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="beforeDescendants">
+        <ImageView
+            android:id="@+id/SwipeIndicator"
+            android:layout_width="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_swipe_white"
+            android:layout_height="25dp" />
+        <EditText
+            android:hint="Search"
+            android:gravity="center"
+            android:paddingLeft="7dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/search"
+            />
+
+
+        <GridView
+           android:focusable="true"
+            android:focusedByDefault="true"
+            android:id="@+id/AppsGrid"
+            android:paddingLeft="10dp"
+            android:paddingRight="7dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="auto_fit"
+            android:columnWidth="70dp"
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="20dp"
+            android:gravity="center"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"
+            android:scrollbarSize="5dp"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbarTrackVertical="@drawable/track_color"></GridView>
+
+
+
+
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
